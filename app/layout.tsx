@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/menu/Navbar";
 
 const manrope = Manrope({
   weight: ["400", "700"],
