@@ -13,7 +13,7 @@ export default function MobileMenu() {
         </g>
       </svg>
       <div className="uppercase absolute bottom-0 top-0 left-0 right-0 bg-gray-800 bg-opacity-50 -z-10">
-        <div className=" absolute flex flex-col justify-center top-[5.7rem] left-0 right-0 bg-white rounded-b-xl px-4 pt-12 pb-8">
+        <div className=" absolute flex flex-col justify-center top-[5.7rem] left-0 right-0 bg-white rounded-b-xl px-4 pt-3 pb-8">
           <ProductCard />
         </div>
       </div>
