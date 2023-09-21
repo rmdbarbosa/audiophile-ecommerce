@@ -5,9 +5,12 @@ import Image from "next/image";
 export default function OrangeSpeakerCard() {
   return (
     <div className="flex relative flex-col text-center justify-center items-center gap-12 min-h-[600px] border mt-24 bg-[#D87D4A] rounded-xl">
-      <div className="border border-white opacity-20 absolute top-[-5rem] min-w-[150%] min-h-[75%] scale-50 rounded-[50%]"></div>
-      <div className="border border-white opacity-20 absolute top-[-5rem] min-w-[150%] min-h-[75%] scale-125 rounded-[50%]"></div>
-      <div className="border border-white opacity-20 absolute top-[-5rem] min-w-[150%] min-h-[75%] scale-75 rounded-[50%]"></div>
+      <div
+        className="bg-cover bg-top w-full h-full absolute  bottom-[8rem]"
+        style={{
+          backgroundImage: "url('/assets/home/desktop/pattern-circles.svg')",
+        }}
+      ></div>
 
       <Image
         src={"/assets/home/mobile/image-speaker-zx9.png"}
