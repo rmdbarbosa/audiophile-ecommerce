@@ -20,8 +20,8 @@ export default function Home() {
           </p>
           <Button
             bgColor="bg-orange-400"
-            textColor="white"
-            hover="orange-300"
+            textColor="text-white"
+            hover="hover:bg-orange-300"
           />
         </div>
       </div>
