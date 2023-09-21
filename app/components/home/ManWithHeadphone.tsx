@@ -3,7 +3,7 @@ import React from "react";
 export default function ManWithHeadphone() {
   return (
     <div className="flex flex-col gap-12 text-center">
-      <div className="bg-cover bg-center bg-[url(/assets/shared/mobile/image-best-gear.jpg)] min-h-[300px] rounded-xl mt-20"></div>
+      <div className="bg-cover bg-center bg-[url(/assets/shared/mobile/image-best-gear.jpg)] sm:bg-[url(/assets/shared/tablet/image-best-gear.jpg)] min-h-[300px] rounded-xl mt-20"></div>
       <div>
         <h2 className="font-bold uppercase text-3xl">
           Bringing you the <span className="text-orange-400">best</span> audio

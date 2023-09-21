@@ -28,7 +28,7 @@ export default function MobileMenu() {
             : "hidden"
         }
       >
-        <div className=" absolute flex flex-col justify-center top-[5.7rem] left-0 right-0 bg-white rounded-b-xl px-4 pt-3 pb-8">
+        <div className="absolute flex flex-col justify-center top-[5.7rem] left-0 right-0 bg-white  rounded-b-xl px-4 pt-3 pb-8 sm:flex-row sm:flex-wrap sm:gap-3 sm:px-8">
           <ProductCard />
         </div>
       </div>

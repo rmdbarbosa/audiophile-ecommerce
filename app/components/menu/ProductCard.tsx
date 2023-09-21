@@ -23,7 +23,7 @@ export default function ProductCard() {
         return (
           <div
             key={product.category}
-            className="flex flex-col items-center justify-center relative bg-gray-100 min-w-full min-h-[10rem] mt-16 rounded-xl"
+            className="flex flex-1 flex-col items-center justify-center relative bg-gray-100 min-w-[223px] min-h-[10rem] mt-16 rounded-xl"
           >
             <div className="absolute top-[-3rem]">
               <Image
