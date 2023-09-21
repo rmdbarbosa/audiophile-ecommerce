@@ -1,4 +1,5 @@
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 import EarphonesCard from "./components/home/EarphonesCard";
 import GraySpeakerCard from "./components/home/GraySpeakerCard";
 import ManWithHeadphone from "./components/home/ManWithHeadphone";
@@ -35,6 +36,7 @@ export default function Home() {
         <GraySpeakerCard />
         <EarphonesCard />
         <ManWithHeadphone />
+        <Footer />
       </div>
     </>
   );
