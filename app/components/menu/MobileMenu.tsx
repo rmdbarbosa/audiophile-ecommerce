@@ -15,7 +15,7 @@ export default function MobileMenu() {
       <div
         className={
           menu
-            ? "uppercase absolute bottom-0 top-0 left-0 right-0 bg-gray-800 bg-opacity-50 -z-10"
+            ? "uppercase absolute bottom-0 top-0 left-0 right-0 bg-gray-800 bg-opacity-70"
             : "hidden"
         }
       >
