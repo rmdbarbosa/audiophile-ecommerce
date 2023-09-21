@@ -1,9 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import ProductCard from "./ProductCard";
 
 export default function MobileMenu() {
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    const bodyElement = document.body;
+
+    menu
+      ? (bodyElement.style.overflow = "hidden")
+      : (bodyElement.style.overflow = "");
+  }, [menu]);
 
   return (
     <div className="z-10" onClick={() => setMenu(!menu)}>
@@ -15,7 +24,7 @@ export default function MobileMenu() {
       <div
         className={
           menu
-            ? "uppercase absolute bottom-0 top-0 left-0 right-0 bg-gray-800 bg-opacity-70"
+            ? "uppercase absolute overflow-y-scroll bottom-0 top-0 left-0 right-0 bg-gray-800 bg-opacity-70"
             : "hidden"
         }
       >

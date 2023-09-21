@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex relative items-center text-center min-h-[600px]  top-0 left-0 right-0 bg-cover bg-center bg-[url('/assets/home/mobile/image-header.jpg')]`}
+        className={`flex absolute items-center text-center min-h-[600px]  top-0 left-0 right-0 bg-cover bg-center bg-[url('/assets/home/mobile/image-header.jpg')]`}
       >
         <div className="flex flex-col items-center justify-center gap-6 min-h-[290px] px-6 pt-24">
           <h2 className="text-gray-300 uppercase tracking-[.55em]">
@@ -25,7 +25,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="absolute left-0 right-0 py-6 px-6 uppercase">
+      <div className="absolute top-[37rem] left-0 right-0 py-6 px-6 uppercase ">
         <ProductCard />
       </div>
     </>
