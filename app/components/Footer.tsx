@@ -4,7 +4,7 @@ const links = ["HOME", "HEADPHONES", "SPEAKERS", "EARPHONES"];
 
 export default function Footer() {
   return (
-    <div className="bg-black absolute left-0 right-0 mt-24 gap-8 text-center flex flex-col justify-center items-center max-w-[375px] p-8">
+    <div className="bg-black absolute left-0 right-0 mt-24 gap-8 text-center flex flex-col justify-center items-center  p-8">
       <div>
         <h1 className="text-white normal-case font-extrabold text-2xl">
           αudiophile
