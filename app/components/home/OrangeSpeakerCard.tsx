@@ -22,7 +22,11 @@ export default function OrangeSpeakerCard() {
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <Button bgColor="bg-black" textColor="text-white" hover="" />
+      <Button
+        bgColor="bg-black"
+        textColor="text-white"
+        hover="hover:bg-gray-700"
+      />
     </div>
   );
 }

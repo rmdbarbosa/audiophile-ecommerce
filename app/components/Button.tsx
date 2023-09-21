@@ -4,12 +4,22 @@ type ButtonProps = {
   bgColor: string;
   textColor: string;
   hover: string;
+  border?: string;
+  textBold?: string;
+  textColorHover?: string;
 };
 
-export default function Button({ bgColor, textColor, hover }: ButtonProps) {
+export default function Button({
+  bgColor,
+  textColor,
+  hover,
+  border,
+  textBold,
+  textColorHover,
+}: ButtonProps) {
   return (
     <button
-      className={`${hover} ${bgColor} ${textColor} min-w-[160px] min-h-[48px] flex items-center justify-center`}
+      className={`${hover} ${bgColor} ${textColor} ${border} ${textBold} ${textColorHover} min-w-[160px] min-h-[48px] flex items-center justify-center`}
     >
       SEE PRODUCT
     </button>

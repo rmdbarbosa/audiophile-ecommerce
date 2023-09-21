@@ -1,4 +1,5 @@
 import Button from "./components/Button";
+import GraySpeakerCard from "./components/home/GraySpeakerCard";
 import OrangeSpeakerCard from "./components/home/OrangeSpeakerCard";
 import ProductCard from "./components/menu/ProductCard";
 
@@ -29,6 +30,7 @@ export default function Home() {
       <div className="absolute top-[37rem] left-0 right-0 py-6 px-6 uppercase ">
         <ProductCard />
         <OrangeSpeakerCard />
+        <GraySpeakerCard />
       </div>
     </>
   );
