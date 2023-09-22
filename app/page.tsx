@@ -30,7 +30,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="absolute top-[37rem] left-0 right-0 py-6 px-6 uppercase lg:px-28">
+      <div className="absolute top-[37rem] -z-50 left-0 right-0 py-6 px-6 uppercase lg:px-28">
         <div className="flex flex-wrap justify-center gap-3">
           <ProductCard />
         </div>

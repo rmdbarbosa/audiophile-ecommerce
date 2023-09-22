@@ -9,7 +9,7 @@ export type Product = {
   price: number;
   description: string;
   features: string;
-  includes: Include[];
+  includes: Includes[];
   gallery: Gallery;
   others: Other[];
 };
@@ -26,7 +26,7 @@ export type Gallery = {
   third: Image;
 };
 
-export type Include = {
+export type Includes = {
   quantity: number;
   item: string;
 };

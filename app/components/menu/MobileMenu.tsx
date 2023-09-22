@@ -12,11 +12,10 @@ export default function MobileMenu() {
     menu
       ? (bodyElement.style.overflow = "hidden")
       : (bodyElement.style.overflow = "");
-      
   }, [menu]);
 
   return (
-    <div className="z-10 lg:hidden" onClick={() => setMenu(!menu)}>
+    <div className="z-40 lg:hidden" onClick={() => setMenu(!menu)}>
       <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
         <g fill={menu ? "rgba(128,128,128, .3)" : "#FFF"} fillRule="evenodd">
           <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
