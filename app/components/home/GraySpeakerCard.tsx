@@ -12,6 +12,8 @@ export default function GraySpeakerCard() {
         border="border border-black"
         textBold="font-bold"
         textColorHover="hover:text-white"
+        link="zx7-speaker"
+        slug="speakers"
       />
     </div>
   );

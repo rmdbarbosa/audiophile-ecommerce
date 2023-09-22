@@ -27,6 +27,8 @@ export default function Home() {
             bgColor="bg-orange-400"
             textColor="text-white"
             hover="hover:bg-orange-300"
+            link="xx99-mark-two-headphones"
+            slug="headphones"
           />
         </div>
       </div>

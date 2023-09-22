@@ -14,6 +14,8 @@ export default function EarphonesCard() {
           border="border border-black"
           textBold="font-bold"
           textColorHover="hover:text-white"
+          link="yx1-earphones"
+          slug="earphones"
         />
       </div>
     </div>

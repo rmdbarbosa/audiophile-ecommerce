@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
-const links = ["HOME", "HEADPHONES", "SPEAKERS", "EARPHONES"];
+const links = ["home", "headphones", "speakers", "earphones"];
 
 export default function Footer() {
   return (
@@ -10,17 +11,21 @@ export default function Footer() {
           αudiophile
         </h1>
         <div className="border border-orange-400 absolute top-0 min-w-[120px]"></div>
-      
-      <ul className="flex flex-col text-white text-sm gap-6 tracking-widest sm:flex-row mt-3 lg:m-0">
-        {links.map((link) => (
-          <li
-            key={link}
-            className="hover:text-orange-300 cursor-pointer duration-200"
-          >
-            {link}
-          </li>
-        ))}
-      </ul>
+
+        <ul className="flex flex-col text-white text-sm gap-6 tracking-widest sm:flex-row mt-3 lg:m-0">
+          {links.map((link) => (
+            <li
+              key={link}
+              className="cursor-pointer hover:text-orange-400 transition-colors"
+            >
+              {link === "home" ? (
+                <Link href="/">{link}</Link>
+              ) : (
+                <Link href={`/${link}`}>{link}</Link>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
       <p className="normal-case text-gray-400 text-sm mt-6 p-3 sm:pl-0 lg:mt-0 lg:max-w-[32.5rem]">
         Audiophile is an all in one stop to fulfill your audio needs. We are a
