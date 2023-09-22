@@ -8,8 +8,8 @@ type ButtonProps = {
   border?: string;
   textBold?: string;
   textColorHover?: string;
-  link?: string;
-  slug?: string;
+  link: string;
+  slug: string;
 };
 
 export default function Button({
