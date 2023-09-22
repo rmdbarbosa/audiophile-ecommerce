@@ -19,7 +19,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`${hover} ${bgColor} ${textColor} ${border} ${textBold} ${textColorHover} min-w-[160px] min-h-[48px] flex items-center justify-center`}
+      className={`${hover} ${bgColor} ${textColor} ${border} ${textBold} ${textColorHover} lg:z-30 min-w-[160px] min-h-[48px] flex items-center justify-center`}
     >
       SEE PRODUCT
     </button>

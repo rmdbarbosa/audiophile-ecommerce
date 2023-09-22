@@ -1,13 +1,16 @@
 import React from "react";
 import MobileMenu from "./MobileMenu";
+import DesktopMenu from "./DesktopMenu";
 
 export default function Navbar() {
   return (
-    <div className="bg-black min-h-[90px] flex items-center justify-between px-6">
+    <div className="bg-black min-h-[90px] flex items-center justify-between px-6 lg:px-28">
       <MobileMenu />
-      <div className="z-10">
+      <div className="z-10 relative">
         <h1 className="text-white font-extrabold text-2xl">αudiophile</h1>
       </div>
+      <div className="absolute border-gray-200 border opacity-20 z-30 left-0 right-0 top-[5.5rem] sm:mx-6 lg:mx-28"></div>
+      <DesktopMenu />
       <div className="z-10">
         <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg">
           <path

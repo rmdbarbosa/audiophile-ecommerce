@@ -4,14 +4,14 @@ const links = ["HOME", "HEADPHONES", "SPEAKERS", "EARPHONES"];
 
 export default function Footer() {
   return (
-    <div className="bg-black absolute left-0 right-0 mt-24 gap-8 text-center flex flex-col justify-center items-center p-8 sm:items-start sm:text-left">
-      <div className="">
+    <div className="bg-black absolute left-0 right-0 mt-24 gap-8 text-center flex flex-col justify-center items-center p-8 sm:items-start sm:text-left lg:px-28 lg:py-16">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:w-[100%] lg:justify-between">
         <h1 className="text-white normal-case font-extrabold text-2xl">
           αudiophile
         </h1>
-        <div className="border border-orange-400 absolute top-0 min-w-[100px]"></div>
-      </div>
-      <ul className="flex flex-col text-white text-sm gap-6 tracking-widest sm:flex-row">
+        <div className="border border-orange-400 absolute top-0 min-w-[120px]"></div>
+      
+      <ul className="flex flex-col text-white text-sm gap-6 tracking-widest sm:flex-row mt-3 lg:m-0">
         {links.map((link) => (
           <li
             key={link}
@@ -21,17 +21,18 @@ export default function Footer() {
           </li>
         ))}
       </ul>
-      <p className="normal-case text-gray-400 text-sm mt-6 p-3 sm:pl-0">
+      </div>
+      <p className="normal-case text-gray-400 text-sm mt-6 p-3 sm:pl-0 lg:mt-0 lg:max-w-[32.5rem]">
         Audiophile is an all in one stop to fulfill your audio needs. We are a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
         facility - we’re open 7 days a week.
       </p>
-      <div className="flex flex-col justify-center items-center gap-6 sm:flex-row sm:justify-between w-full">
+      <div className="flex flex-col relative justify-center items-center gap-6 sm:flex-row sm:justify-between w-full">
         <span className="normal-case text-gray-400 text-sm p-3 sm:p-0">
           Copyright 2021. All Rights Reserved
         </span>
-        <ul className="flex gap-3 ">
+        <ul className="flex gap-3 lg:absolute lg:top-[-5rem] lg:right-0">
           <li className="cursor-pointer text-orange-400 hover:fill-orange-300 ">
             <svg
               className="hover:fill-current fill-white duration-200"

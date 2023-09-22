@@ -9,7 +9,7 @@ export default function ManWithHeadphone() {
           Bringing you the <span className="text-orange-400">best</span> audio
           gear
         </h2>
-        <p className="normal-case text-gray-600 text-sm mt-6 lg:text-left">
+        <p className="normal-case text-gray-600 text-sm mt-6 lg:text-left lg:pr-20">
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
           We have a large showroom and luxury demonstration rooms available for

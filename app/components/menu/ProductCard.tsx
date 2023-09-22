@@ -23,7 +23,7 @@ export default function ProductCard() {
         return (
           <div
             key={product.category}
-            className="flex flex-1 flex-col items-center justify-center relative bg-gray-100 min-w-[223px] min-h-[10rem] mt-16 rounded-xl"
+            className="flex flex-1 flex-col items-center justify-center cursor-pointer z-40  relative bg-gray-100 min-w-[223px] min-h-[10rem] mt-16 rounded-xl"
           >
             <div className="absolute top-[-3rem]">
               <Image
@@ -36,7 +36,7 @@ export default function ProductCard() {
             <div>
               <h2 className="font-bold">{product.category}</h2>
             </div>
-            <div className="flex justify-center items-center absolute bottom-0 pb-6 font-bold text-gray-500 text-sm">
+            <div className="flex hover:text-orange-500 transition-colors justify-center items-center absolute bottom-0 pb-6 font-bold text-gray-500 text-sm ">
               SHOP
               <svg
                 className="absolute right-[-1rem]"
