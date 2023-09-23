@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import ManWithHeadphone from "@/app/components/home/ManWithHeadphone";
 import ProductCard from "@/app/components/menu/ProductCard";
 import MayAlsoLike from "@/app/components/products/MayAlsoLike";
+import Gallery from "@/app/components/products/Gallery";
 
 export async function generateStaticParams() {
   const products = await json;
@@ -20,12 +21,12 @@ export default function productsPage({
 }: {
   params: { productSlug: string };
 }) {
-  const MayAlsoLikeFiltered = json
+  const productFilteredBySlug = json
     .filter((product) => product.slug === params.productSlug)
-    .map((product) => product.others.map((innerArray) => innerArray));
+    .map((product) => product);
 
-  const OtherProducts = MayAlsoLikeFiltered.map((innerArray) =>
-    innerArray.map((other) => (
+  const otherProducts = productFilteredBySlug.map((innerArray) =>
+    innerArray.others.map((other) => (
       <MayAlsoLike
         key={other.name}
         image={other.image}
@@ -36,10 +37,17 @@ export default function productsPage({
     ))
   );
 
+  const gallery = productFilteredBySlug.map((innerArray) => innerArray.gallery);
+
   return (
-    <div className="text-center p-6 lg:px-28">
+    <div className="text-center p-6 lg:px-28 uppercase">
+      <Gallery
+        first={gallery[0].first}
+        second={gallery[0].second}
+        third={gallery[0].third}
+      />
       <h1 className="font-bold text-2xl mb-8">YOU MAY ALSO LIKE</h1>
-      <div className="sm:flex sm:gap-3 lg:gap-6">{OtherProducts}</div>
+      <div className="sm:flex sm:gap-3 lg:gap-6">{otherProducts}</div>
       <ProductCard />
       <ManWithHeadphone />
       <Footer />
