@@ -4,6 +4,7 @@ import ProductCard from "@/app/components/menu/ProductCard";
 import ProductBigCard from "@/app/components/products/ProductBigCard";
 import React from "react";
 import data from "../../../products/data.json";
+import "../../../../app/globals.css";
 
 const categories = ["headphones", "speakers", "earphones"];
 
@@ -35,7 +36,7 @@ export default function categoryPage({ params }: { params: { slug: string } }) {
       <div className="absolute top-[5.6rem] left-0 right-0 bg-black min-h-[100px] text-white justify-center items-center flex font-bold text-2xl">
         <h2>{params.slug}</h2>
       </div>
-      {filteredProps}
+      <div id="reverse__even">{filteredProps}</div>
       <div className="flex flex-wrap justify-center gap-3">
         <ProductCard />
       </div>
