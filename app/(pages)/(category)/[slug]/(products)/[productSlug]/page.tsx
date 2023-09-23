@@ -37,9 +37,9 @@ export default function productsPage({
   );
 
   return (
-    <div className="text-center p-6">
+    <div className="text-center p-6 lg:px-28">
       <h1 className="font-bold text-2xl mb-8">YOU MAY ALSO LIKE</h1>
-      {OtherProducts}
+      <div className="sm:flex sm:gap-3 lg:gap-6">{OtherProducts}</div>
       <ProductCard />
       <ManWithHeadphone />
       <Footer />

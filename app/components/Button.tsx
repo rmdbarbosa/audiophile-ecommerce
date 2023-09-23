@@ -25,7 +25,7 @@ export default function Button({
   return (
     <Link href={`/${slug}/${link}`}>
       <button
-        className={`${hover} ${bgColor} ${textColor} ${border} ${textBold} ${textColorHover} lg:z-30 min-w-[160px] min-h-[48px] flex items-center justify-center`}
+        className={`${hover} ${bgColor} ${textColor} ${border} ${textBold} ${textColorHover} lg:z-30 min-w-[160px] min-h-[48px] text-sm flex items-center justify-center tracking-widest`}
       >
         SEE PRODUCT
       </button>
