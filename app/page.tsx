@@ -13,7 +13,7 @@ export default function Home() {
       <div
         className={`flex absolute items-center text-center min-h-[600px] justify-center  top-0 left-0 right-0 bg-cover bg-center bg-[url('/assets/home/mobile/image-header.jpg')] sm:bg-[url('/assets/home/tablet/image-header.jpg')] lg:bg-[url('/assets/home/desktop/image-hero.jpg')] lg:justify-start`}
       >
-        <div className="flex flex-col items-center justify-center gap-6 min-h-[290px] px-6 pt-24 lg:text-left lg:items-start lg:max-w-[400px] lg:pl-28">
+        <div className="flex flex-col items-center justify-center gap-6 min-h-[290px] px-6 pt-24 lg:text-left lg:items-start lg:max-w-[500px] lg:pl-28">
           <NewProduct textColor="text-gray-300" />
           <h1 className="text-white font-bold uppercase text-4xl lg:text-6xl">
             XX99 Mark II Headphones
