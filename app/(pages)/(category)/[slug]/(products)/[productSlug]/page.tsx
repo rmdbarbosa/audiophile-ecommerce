@@ -1,5 +1,4 @@
 import React from "react";
-import * as data from "../../../../../types/productTypes";
 import json from "../../../../../products/data.json";
 import Footer from "@/app/components/Footer";
 import ManWithHeadphone from "@/app/components/home/ManWithHeadphone";
@@ -21,10 +20,26 @@ export default function productsPage({
 }: {
   params: { productSlug: string };
 }) {
+  const MayAlsoLikeFiltered = json
+    .filter((product) => product.slug === params.productSlug)
+    .map((product) => product.others.map((innerArray) => innerArray));
+
+  const OtherProducts = MayAlsoLikeFiltered.map((innerArray) =>
+    innerArray.map((other) => (
+      <MayAlsoLike
+        key={other.name}
+        image={other.image}
+        name={other.name}
+        slug={other.category}
+        link={other.slug}
+      />
+    ))
+  );
+
   return (
     <div className="text-center p-6">
       <h1 className="font-bold text-2xl mb-8">YOU MAY ALSO LIKE</h1>
-      <MayAlsoLike />
+      {OtherProducts}
       <ProductCard />
       <ManWithHeadphone />
       <Footer />

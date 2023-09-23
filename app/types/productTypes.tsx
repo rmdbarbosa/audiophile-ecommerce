@@ -18,6 +18,7 @@ export type Other = {
   slug: string;
   name: string;
   image: Image;
+  link: string;
 };
 
 export type Gallery = {
