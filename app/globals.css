@@ -6,6 +6,22 @@
   outline: 1px solid #f00 !important;
 } */
 
+/* Hide arrows from input */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Hide arrows from input */
+
 @media screen and (min-width: 1024px) {
   #reverse__even > div:nth-child(2n) {
     flex-direction: row-reverse;
