@@ -7,6 +7,7 @@ import MayAlsoLike from "@/app/components/products/MayAlsoLike";
 import Gallery from "@/app/components/products/Gallery";
 import InTheBox from "@/app/components/products/InTheBox";
 import MainProductPage from "@/app/components/products/MainProductPage";
+import GoBack from "@/app/components/products/GoBack";
 
 export function generateStaticParams() {
   const products = json;
@@ -51,9 +52,7 @@ export default function productsPage({
 
   return (
     <div className="text-center p-6 lg:px-36 uppercase">
-      <span className="normal-case flex mb-6 text-sm text-gray-500">
-        Go back
-      </span>
+      <GoBack />
       <MainProductPage
         description={productFilteredBySlug[0].description}
         id={productFilteredBySlug[0].id}
