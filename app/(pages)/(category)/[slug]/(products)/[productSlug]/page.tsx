@@ -5,6 +5,7 @@ import ManWithHeadphone from "@/app/components/home/ManWithHeadphone";
 import ProductCard from "@/app/components/menu/ProductCard";
 import MayAlsoLike from "@/app/components/products/MayAlsoLike";
 import Gallery from "@/app/components/products/Gallery";
+import InTheBox from "@/app/components/products/InTheBox";
 
 export function generateStaticParams() {
   const products = json;
@@ -37,8 +38,32 @@ export default function productsPage({
 
   const gallery = productFilteredBySlug.map((innerArray) => innerArray.gallery);
 
+  const features = productFilteredBySlug[0].features;
+
+  const inTheBox = productFilteredBySlug.map((product) =>
+    product.includes.map((item) => {
+      return (
+        <InTheBox key={item.item} item={item.item} quantity={item.quantity} />
+      );
+    })
+  );
+
   return (
-    <div className="text-center p-6 lg:px-28 uppercase">
+    <div className="text-center p-6 lg:px-36 uppercase">
+      <div className="lg:flex lg:my-28 lg:gap-44">
+        <div className="flex flex-col gap-6 items-start text-left lg:flex-1 lg:max-w-[635px]">
+          <h2 className="font-bold text-lg sm:text-3xl">FEATURES</h2>
+          <p className="whitespace-pre-line  normal-case text-gray-500 text-sm">
+            {features}
+          </p>
+        </div>
+        <div className="my-28 sm:flex sm:gap-60 lg:flex-col lg:gap-0 lg:my-0">
+          <h2 className="font-bold text-lg self-start flex mb-6 sm:text-3xl">
+            IN THE BOX
+          </h2>
+          <div>{inTheBox}</div>
+        </div>
+      </div>
       <Gallery
         first={gallery[0].first}
         second={gallery[0].second}

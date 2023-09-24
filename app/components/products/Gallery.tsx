@@ -4,8 +4,8 @@ import React from "react";
 
 export default function Gallery({ first, second, third }: Gallery) {
   return (
-    <div className="w-[100%] flex flex-col sm:flex-row gap-4 mb-24">
-      <div className="flex flex-col gap-4">
+    <div className="w-full flex flex-col sm:flex-row gap-4 mb-24">
+      <div className="flex justify-between flex-auto flex-col gap-4">
         <picture>
           <source media="(min-width: 1024px)" srcSet={first.desktop.slice(1)} />
           <source media="(min-width: 640px)" srcSet={first.tablet.slice(1)} />
@@ -42,7 +42,7 @@ export default function Gallery({ first, second, third }: Gallery) {
           />
         </picture>
       </div>
-      <picture>
+      <picture className="flex-auto">
         <source media="(min-width: 1024px)" srcSet={third.desktop.slice(1)} />
         <source media="(min-width: 640px)" srcSet={third.tablet.slice(1)} />
         <Image
