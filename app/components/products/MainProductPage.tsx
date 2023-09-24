@@ -14,7 +14,7 @@ export default function MainProductPage({
 }: MainProduct) {
   return (
     <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 sm:mb-24 lg:gap-28">
-      <picture>
+      <picture className="lg:min-w-[50%]">
         <source media="(min-width: 1024px)" srcSet={image.desktop.slice(1)} />
         <source media="(min-width: 640px)" srcSet={image.tablet.slice(1)} />
         <Image
@@ -30,12 +30,12 @@ export default function MainProductPage({
           alt={name}
         />
       </picture>
-      <div className="flex flex-col gap-6 text-left sm:justify-center">
+      <div className="flex flex-col gap-6 text-left sm:justify-center sm:min-w-[50%]">
         {isNew ? <NewProduct textColor="text-orange-600" /> : null}
         <h2 className="font-bold text-3xl lg:max-w-[350px] lg:text-3xl sm:max-w-[339px]">
           {name}
         </h2>
-        <p className="normal-case text-sm text-gray-500 sm:max-w-full lg:max-w-full">
+        <p className="normal-case text-sm text-gray-500 sm:max-w-[330px] lg:max-w-[50%]">
           {description}
         </p>
         <span className="font-bold text-lg">$ {price}</span>
