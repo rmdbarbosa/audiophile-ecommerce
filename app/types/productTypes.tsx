@@ -37,3 +37,12 @@ export type Image = {
   tablet: string;
   desktop: string;
 };
+
+export type MainProduct = {
+  id: number;
+  name: string;
+  image: Image;
+  isNew: boolean;
+  price: number;
+  description: string;
+};

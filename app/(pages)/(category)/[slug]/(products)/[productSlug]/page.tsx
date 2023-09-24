@@ -6,6 +6,7 @@ import ProductCard from "@/app/components/menu/ProductCard";
 import MayAlsoLike from "@/app/components/products/MayAlsoLike";
 import Gallery from "@/app/components/products/Gallery";
 import InTheBox from "@/app/components/products/InTheBox";
+import MainProductPage from "@/app/components/products/MainProductPage";
 
 export function generateStaticParams() {
   const products = json;
@@ -50,6 +51,17 @@ export default function productsPage({
 
   return (
     <div className="text-center p-6 lg:px-36 uppercase">
+      <span className="normal-case flex mb-6 text-sm text-gray-500">
+        Go back
+      </span>
+      <MainProductPage
+        description={productFilteredBySlug[0].description}
+        id={productFilteredBySlug[0].id}
+        image={productFilteredBySlug[0].image}
+        isNew={productFilteredBySlug[0].new}
+        name={productFilteredBySlug[0].name}
+        price={productFilteredBySlug[0].price}
+      />
       <div className="lg:flex lg:my-28 lg:gap-44">
         <div className="flex flex-col gap-6 items-start text-left lg:flex-1 lg:max-w-[635px]">
           <h2 className="font-bold text-lg sm:text-3xl">FEATURES</h2>
