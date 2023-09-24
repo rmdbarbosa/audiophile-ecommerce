@@ -18,7 +18,8 @@ export default function AddRemoveInputButton() {
         <input
           className="bg-inherit text-center w-[60px]"
           type="number"
-          defaultValue={input}
+          value={input}
+          onChange={(e) => setInput(Number(e.target.value))}
           disabled
         />
         <span
