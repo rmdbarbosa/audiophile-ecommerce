@@ -6,15 +6,13 @@ import ProductCard from "@/app/components/menu/ProductCard";
 import MayAlsoLike from "@/app/components/products/MayAlsoLike";
 import Gallery from "@/app/components/products/Gallery";
 
-export async function generateStaticParams() {
-  const products = await json;
+export function generateStaticParams() {
+  const products = json;
 
   return products.map((product) => ({
     productSlug: product.slug,
   }));
 }
-
-export const dynamicParams = false; // true | false,
 
 export default function productsPage({
   params,
