@@ -46,7 +46,9 @@ export default function productsPage({
       />
       <h1 className="font-bold text-2xl mb-8">YOU MAY ALSO LIKE</h1>
       <div className="sm:flex sm:gap-3 lg:gap-6">{otherProducts}</div>
-      <ProductCard />
+      <div className="flex flex-wrap justify-center gap-3">
+        <ProductCard />
+      </div>
       <ManWithHeadphone />
       <Footer />
     </div>
