@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Navbar from "./components/menu/Navbar";
+import CartModal from "./components/CartModal";
 
 const manrope = Manrope({
   weight: ["400", "700"],
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={manrope.className}>
         <Navbar />
+        <CartModal />
         {children}
       </body>
     </html>
