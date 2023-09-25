@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 import { ProductToCart } from "../components/products/AddRemoveInputButton";
 
 export const CartContext = createContext<null | any>(null);
@@ -71,10 +71,6 @@ export default function CartContextProvider({ children }: any) {
     // Return the total cart amount
     return totalAmount;
   };
-
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   return (
     <CartContext.Provider

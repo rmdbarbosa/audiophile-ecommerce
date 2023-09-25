@@ -15,8 +15,6 @@ export default function CartModal() {
     decreaseItemQuantity,
   } = useCartContext();
 
-  // Create a ProductToCart object
-
   return (
     <div
       className={`${
@@ -77,7 +75,12 @@ export default function CartModal() {
 
             <div className="flex justify-between">
               <span className="text-gray-500 text-sm">TOTAL</span>
-              <span className="font-bold">$ {getTotalCartAmount()}</span>
+              <span className="font-bold">
+                {getTotalCartAmount().toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                })}
+              </span>
             </div>
             <div className="flex justify-center">
               <button className="bg-orange-300 w-full h-[2.5rem] text-white tracking-widest text-sm hover:cursor-pointer hover:bg-orange-200 duration-200">

@@ -40,7 +40,13 @@ export default function MainProductPage({
           {description}
         </p>
         <span className="font-bold text-lg">$ {price}</span>
-        <AddRemoveInputButton id={id} name={name} cartImg={cartImg} price={price}/>
+        <AddRemoveInputButton
+          id={id}
+          name={name}
+          cartImg={cartImg}
+          price={price}
+          quantity={1}
+        />
       </div>
     </div>
   );

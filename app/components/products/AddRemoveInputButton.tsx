@@ -20,7 +20,6 @@ export default function AddRemoveInputButton({
   const [input, setInput] = useState(1);
   const { addToCart } = useCartContext();
 
-  // Create a ProductToCart object
   const productToAdd: ProductToCart = {
     id,
     name,
@@ -52,8 +51,6 @@ export default function AddRemoveInputButton({
           +
         </span>
       </div>
-
-      {/* EDIT HERE TO ADD TO CART */}
 
       <button
         onClick={() => addToCart(productToAdd)}
