@@ -24,7 +24,7 @@ export default function ProductCard() {
         return (
           <div
             key={product.category}
-            className="flex flex-1 flex-col items-center justify-center cursor-pointer z-40  relative bg-gray-100 min-w-[223px] min-h-[10rem] mt-16 rounded-xl uppercase"
+            className="flex flex-1 flex-col items-center justify-center cursor-pointer z-30  relative bg-gray-100 min-w-[223px] min-h-[10rem] mt-16 rounded-xl uppercase"
           >
             <Link
               className="flex justify-center items-center"

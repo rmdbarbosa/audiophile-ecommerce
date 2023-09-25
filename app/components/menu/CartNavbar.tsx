@@ -6,6 +6,9 @@ import CartModal from "../CartModal";
 export default function CartNavbar() {
   const [hidden, setHidden] = useState(true);
   return (
+    <>
+
+    
     <div
       onClick={() => setHidden(!hidden)}
       className="z-50 hover:cursor-pointer fill-white hover:fill-orange-300 duration-200"
@@ -16,7 +19,8 @@ export default function CartNavbar() {
           fillRule="nonzero"
         />
       </svg>
-      <CartModal hiddenProps={hidden} />
     </div>
+      <CartModal hiddenProps={hidden} />
+      </>
   );
 }

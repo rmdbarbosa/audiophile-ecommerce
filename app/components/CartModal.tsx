@@ -8,13 +8,20 @@ type CartModalProps = {
 };
 
 export default function CartModal(hiddenProps: CartModalProps) {
+  const [modal, setModal] = useState(false)
+
+  useEffect(() => {
+    setModal(!modal)
+  }, [hiddenProps])
+
+
   return (
     <div
-      className={`${
-        hiddenProps ? "hidden" : "flex"
-      } fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center`}
+    onClick={() => setModal(!modal)}      className={`${
+        modal ? "hidden" : "flex"
+      } fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center overflow-y-scroll`}
     >
-      <div className="flex flex-col gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
+      <div onClick={(e) => e.stopPropagation()} className=" flex flex-col z-50 gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
         <div className="flex justify-between">
           <span className="font-bold"> CART (3)</span>
           <span className="hover:cursor-pointer hover:text-orange-200 duration-200">
@@ -48,6 +55,7 @@ export default function CartModal(hiddenProps: CartModalProps) {
             </span>
           </div>
         </div>
+        
         <div className="flex justify-between">
           <span className="text-gray-500 text-sm">TOTAL</span>
           <span className="font-bold">$ 5,396</span>
