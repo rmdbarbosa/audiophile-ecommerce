@@ -3,19 +3,31 @@
 import { useCartContext } from "@/app/context/cart-context";
 import React, { useState } from "react";
 
-
 export type ProductToCart = {
-  id: number
-  name: string
-  price: number
-  cartImg: string
-  quantity?: number
-}
+  id: number;
+  name: string;
+  price: number;
+  cartImg: string;
+  quantity: number;
+};
 
-export default function AddRemoveInputButton({id, name, price, cartImg}: ProductToCart) {
+export default function AddRemoveInputButton({
+  id,
+  name,
+  price,
+  cartImg,
+}: ProductToCart) {
   const [input, setInput] = useState(1);
-  const {addToCart} = useCartContext()
+  const { addToCart } = useCartContext();
 
+  // Create a ProductToCart object
+  const productToAdd: ProductToCart = {
+    id,
+    name,
+    price,
+    cartImg,
+    quantity: input,
+  };
 
   return (
     <div className="flex gap-3 mb-20 sm:mb-0">
@@ -41,10 +53,10 @@ export default function AddRemoveInputButton({id, name, price, cartImg}: Product
         </span>
       </div>
 
-{/* EDIT HERE TO ADD TO CART */}
+      {/* EDIT HERE TO ADD TO CART */}
 
       <button
-        onClick={() => addToCart(id, name, price, cartImg, input)}
+        onClick={() => addToCart(productToAdd)}
         className="bg-orange-400 min-w-[160px] min-h-[40px] text-white font-bold text-sm flex items-center justify-center tracking-widest hover:bg-orange-300"
       >
         ADD TO CART
