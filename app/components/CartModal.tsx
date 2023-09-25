@@ -4,9 +4,11 @@ import Image from "next/image";
 import React from "react";
 import { useCartContext } from "../context/cart-context";
 import { ProductToCart } from "./products/AddRemoveInputButton";
+import Link from "next/link";
 
 export default function CartModal() {
   const {
+    setCartModal,
     cartModal,
     cart,
     removeAll,
@@ -83,9 +85,14 @@ export default function CartModal() {
               </span>
             </div>
             <div className="flex justify-center">
-              <button className="bg-orange-300 w-full h-[2.5rem] text-white tracking-widest text-sm hover:cursor-pointer hover:bg-orange-200 duration-200">
-                CHECKOUT
-              </button>
+              <Link className="w-full" href={"/checkout"}>
+                <button
+                  onClick={() => setCartModal(!cartModal)}
+                  className="bg-orange-300 w-full h-[2.5rem] text-white tracking-widest text-sm hover:cursor-pointer hover:bg-orange-200 duration-200"
+                >
+                  CHECKOUT
+                </button>
+              </Link>
             </div>
           </>
         ) : (

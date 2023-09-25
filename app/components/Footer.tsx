@@ -5,14 +5,14 @@ const links = ["home", "headphones", "speakers", "earphones"];
 
 export default function Footer() {
   return (
-    <div className="bg-black absolute left-0 right-0 mt-24 gap-8 text-center flex flex-col justify-center items-center p-8 sm:items-start sm:text-left lg:px-28 lg:py-16">
+    <div className="bg-black absolute left-0 right-0  gap-8 text-center flex flex-col justify-center items-center p-8 sm:items-start sm:text-left lg:px-28 lg:py-16">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:w-[100%] lg:justify-between">
         <h1 className="text-white normal-case font-extrabold text-2xl">
           αudiophile
         </h1>
         <div className="border border-orange-400 absolute top-0 min-w-[120px]"></div>
 
-        <ul className="flex flex-col text-white text-sm gap-6 tracking-widest sm:flex-row mt-3 lg:m-0">
+        <ul className="flex uppercase flex-col text-white text-sm gap-6 tracking-widest sm:flex-row mt-3 lg:m-0">
           {links.map((link) => (
             <li
               key={link}

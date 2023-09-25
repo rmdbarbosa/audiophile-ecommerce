@@ -28,6 +28,11 @@ export default function AddRemoveInputButton({
     quantity: input,
   };
 
+  const handleAddToCart = () => {
+    addToCart(productToAdd);
+    setInput(1);
+  };
+
   return (
     <div className="flex gap-3 mb-20 sm:mb-0">
       <div className="bg-gray-100 w-[100px] min-h-[24px] text-sm flex items-center justify-center">
@@ -53,7 +58,7 @@ export default function AddRemoveInputButton({
       </div>
 
       <button
-        onClick={() => addToCart(productToAdd)}
+        onClick={() => handleAddToCart()}
         className="bg-orange-400 min-w-[160px] min-h-[40px] text-white font-bold text-sm flex items-center justify-center tracking-widest hover:bg-orange-300"
       >
         ADD TO CART
