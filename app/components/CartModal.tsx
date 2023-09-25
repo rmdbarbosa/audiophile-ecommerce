@@ -1,9 +1,19 @@
-import Image from "next/image";
-import React from "react";
+"use client";
 
-export default function CartModal() {
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+
+type CartModalProps = {
+  hiddenProps: boolean;
+};
+
+export default function CartModal(hiddenProps: CartModalProps) {
   return (
-    <div className="fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 flex justify-center">
+    <div
+      className={`${
+        hiddenProps ? "hidden" : "flex"
+      } fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center`}
+    >
       <div className="flex flex-col gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
         <div className="flex justify-between">
           <span className="font-bold"> CART (3)</span>
