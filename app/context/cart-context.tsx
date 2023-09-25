@@ -8,8 +8,12 @@ export default function CartContextProvider({children}: any) {
     const [cartModal, setCartModal] = useState<any>(false)
     const [cart, setCart] = useState(null)
 
+    const addToCart = (item: any) => {
+        setCart(item)
+    }
+
 return (
-   <CartContext.Provider value={{cartModal, setCartModal, cart, setCart}}>
+   <CartContext.Provider value={{cartModal, setCartModal, cart, addToCart}}>
 {children}
 </CartContext.Provider> 
 )}

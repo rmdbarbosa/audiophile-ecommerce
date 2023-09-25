@@ -60,6 +60,7 @@ export default function productsPage({
         isNew={productFilteredBySlug[0].new}
         name={productFilteredBySlug[0].name}
         price={productFilteredBySlug[0].price}
+        cartImg={productFilteredBySlug[0].cartImg}
       />
       <div className="lg:flex lg:my-28 lg:gap-44">
         <div className="flex flex-col gap-6 items-start text-left lg:flex-1 lg:max-w-[635px]">

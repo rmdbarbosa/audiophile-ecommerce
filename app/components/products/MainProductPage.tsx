@@ -11,6 +11,7 @@ export default function MainProductPage({
   isNew,
   price,
   description,
+  cartImg,
 }: MainProduct) {
   return (
     <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 sm:mb-24 lg:gap-28">
@@ -39,7 +40,7 @@ export default function MainProductPage({
           {description}
         </p>
         <span className="font-bold text-lg">$ {price}</span>
-        <AddRemoveInputButton />
+        <AddRemoveInputButton id={id} name={name} cartImg={cartImg} price={price}/>
       </div>
     </div>
   );

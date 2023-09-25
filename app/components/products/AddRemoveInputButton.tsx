@@ -1,10 +1,21 @@
 "use client";
 
+import { useCartContext } from "@/app/context/cart-context";
 import React, { useState } from "react";
 
-export default function AddRemoveInputButton() {
-  const [quantity, setQuantity] = useState(0);
+
+export type ProductToCart = {
+  id: number
+  name: string
+  price: number
+  cartImg: string
+  quantity?: number
+}
+
+export default function AddRemoveInputButton({id, name, price, cartImg}: ProductToCart) {
   const [input, setInput] = useState(1);
+  const {addToCart} = useCartContext()
+
 
   return (
     <div className="flex gap-3 mb-20 sm:mb-0">
@@ -29,8 +40,11 @@ export default function AddRemoveInputButton() {
           +
         </span>
       </div>
+
+{/* EDIT HERE TO ADD TO CART */}
+
       <button
-        onClick={() => setQuantity((prev) => prev + input)}
+        onClick={() => addToCart(id, name, price, cartImg, input)}
         className="bg-orange-400 min-w-[160px] min-h-[40px] text-white font-bold text-sm flex items-center justify-center tracking-widest hover:bg-orange-300"
       >
         ADD TO CART

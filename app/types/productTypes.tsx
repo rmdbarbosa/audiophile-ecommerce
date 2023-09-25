@@ -45,4 +45,5 @@ export type MainProduct = {
   isNew: boolean;
   price: number;
   description: string;
+  cartImg: string
 };
