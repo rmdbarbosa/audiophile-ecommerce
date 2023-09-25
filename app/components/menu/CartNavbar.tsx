@@ -1,16 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import CartModal from "../CartModal";
+import { useCartContext } from "@/app/context/cart-context";
 
 export default function CartNavbar() {
-  const [hidden, setHidden] = useState(true);
+  const {cartModal, setCartModal} = useCartContext()
   return (
     <>
 
     
     <div
-      onClick={() => setHidden(!hidden)}
+      onClick={() => setCartModal(!cartModal)}
       className="z-50 hover:cursor-pointer fill-white hover:fill-orange-300 duration-200"
     >
       <svg width="23" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +21,7 @@ export default function CartNavbar() {
         />
       </svg>
     </div>
-      <CartModal hiddenProps={hidden} />
+      <CartModal />
       </>
   );
 }

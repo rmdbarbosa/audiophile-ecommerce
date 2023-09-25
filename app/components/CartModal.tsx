@@ -1,28 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useCartContext } from "../context/cart-context";
 
-type CartModalProps = {
-  hiddenProps: boolean;
-};
 
-export default function CartModal(hiddenProps: CartModalProps) {
-  const [modal, setModal] = useState(false)
 
-  useEffect(() => {
-    setModal(!modal)
-  }, [hiddenProps])
+export default function CartModal() {
+const {cartModal, cart} = useCartContext()
+
+
 
 
   return (
     <div
-    onClick={() => setModal(!modal)}      className={`${
-        modal ? "hidden" : "flex"
-      } fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center overflow-y-scroll`}
+         className={`${cartModal ? "flex" : "hidden"} fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center overflow-y-scroll`}
     >
-      <div onClick={(e) => e.stopPropagation()} className=" flex flex-col z-50 gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
-        <div className="flex justify-between">
+      <div className=" flex flex-col z-50 gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
+        {cart ? (<><div className="flex justify-between">
           <span className="font-bold"> CART (3)</span>
           <span className="hover:cursor-pointer hover:text-orange-200 duration-200">
             Remove all
@@ -64,7 +59,8 @@ export default function CartModal(hiddenProps: CartModalProps) {
           <button className="bg-orange-300 w-full h-[2.5rem] text-white tracking-widest text-sm hover:cursor-pointer hover:bg-orange-200 duration-200">
             CHECKOUT
           </button>
-        </div>
+        </div></>) : (<p>Your cart is empty</p>)}
+        
       </div>
     </div>
   );
