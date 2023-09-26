@@ -1,3 +1,6 @@
+![audiophile-ecommerce-mu-peach vercel app_](https://github.com/rmdbarbosa/audiophile-ecommerce/assets/69510537/be5b7ac3-31f9-4150-abe7-8501233cd861)
+![audiophile-metrics](https://github.com/rmdbarbosa/audiophile-ecommerce/assets/69510537/2e248d28-1b4a-4e66-bb64-cd1381f8b176)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
