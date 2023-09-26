@@ -19,11 +19,12 @@ export default function CartModal() {
 
   return (
     <div
+    onClick={() => setCartModal(!cartModal)}
       className={`${
         cartModal ? "flex" : "hidden"
       } fixed w-[100%] h-[100%] left-0 top-0 bg-gray-800 bg-opacity-70 z-40 justify-center overflow-y-scroll`}
     >
-      <div className=" flex flex-col z-50 gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
+      <div onClick={(e) => e.stopPropagation()} className=" flex flex-col z-50 gap-6 bg-white absolute  top-[5.5rem]  sm:right-0 lg:right-[5.5rem] mx-6 mt-6 rounded-xl p-6 max-w-[377px]">
         {cart.length > 0 ? (
           <>
             <div className="flex justify-between">

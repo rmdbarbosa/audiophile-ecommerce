@@ -1,12 +1,17 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from "react";
 import { ProductToCart } from "../components/products/AddRemoveInputButton";
+
+type CartContextProviderProps = {
+  children: ReactNode;
+}
 
 export const CartContext = createContext<null | any>(null);
 
-export default function CartContextProvider({ children }: any) {
-  const [cartModal, setCartModal] = useState<any>(false);
+
+export default function CartContextProvider({ children }: CartContextProviderProps) {
+  const [cartModal, setCartModal] = useState(false);
   const [cart, setCart] = useState<ProductToCart[]>([]);
   const [orderModal, setOrderModal] = useState(false)
   const [grandTotal, setGrandTotal] = useState(0)
