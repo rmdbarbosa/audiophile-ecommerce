@@ -8,6 +8,8 @@ export const CartContext = createContext<null | any>(null);
 export default function CartContextProvider({ children }: any) {
   const [cartModal, setCartModal] = useState<any>(false);
   const [cart, setCart] = useState<ProductToCart[]>([]);
+  const [orderModal, setOrderModal] = useState(false)
+  const [grandTotal, setGrandTotal] = useState(0)
 
   const addToCart = (item: ProductToCart) => {
     const { id, cartImg, quantity, name, price } = item;
@@ -83,6 +85,10 @@ export default function CartContextProvider({ children }: any) {
         getTotalCartAmount,
         increaseItemQuantity,
         decreaseItemQuantity,
+        setOrderModal,
+        orderModal,
+        grandTotal,
+        setGrandTotal,
       }}
     >
       {children}

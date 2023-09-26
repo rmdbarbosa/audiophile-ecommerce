@@ -1,43 +1,25 @@
 "use client";
 
 import Footer from "@/app/components/Footer";
+import Checkout from "@/app/components/checkout/Checkout";
 import GoBack from "@/app/components/products/GoBack";
 import { useCartContext } from "@/app/context/cart-context";
 import Image from "next/image";
 import React from "react";
 
-export default function Checkout() {
-  const { getTotalCartAmount, cart } = useCartContext();
+export default function CheckoutPage() {
+  const { getTotalCartAmount, cart, setOrderModal, grandTotal, setGrandTotal } = useCartContext();
   const vat = (getTotalCartAmount() * 20) / 100;
-  const grandTotal = getTotalCartAmount() + vat + 50;
+
+  setGrandTotal(getTotalCartAmount() + vat + 50);
+  
   return (
     <>
       <div className="bg-gray-100 min-h-screen flex flex-col gap-6 p-6 lg:p-28">
         <GoBack />
         <div className="flex flex-col gap-6 lg:flex-row">
-          <div className="bg-white rounded-xl p-6 flex flex-col gap-3 font-bold">
-            <h2 className="text-2xl uppercase font-bold">Checkout</h2>
-            <h3 className="text-orange-400 text-sm">BILLING DETAILS</h3>
-            <span>Name</span>
-            <input
-              className="border rounded-xl h-[46px] p-3"
-              type="text"
-              placeholder="John Doe"
-            />
-            <span>Name</span>
-            <input
-              className="border rounded-xl h-[46px] p-3"
-              type="text"
-              placeholder="John Doe"
-            />
-            <span>Name</span>
-            <input
-              className="border rounded-xl h-[46px] p-3"
-              type="text"
-              placeholder="John Doe"
-            />
-          </div>
-          <div className="bg-white rounded-xl p-6 flex flex-col gap-6">
+          <Checkout />
+          {cart.length > 0 ? <div className="bg-white rounded-xl p-6 flex flex-col gap-6 lg:flex-1">
             <h2 className="uppercase font-bold">Summary</h2>
             <div className="flex flex-col gap-3">
               {cart.map((product: any) => (
@@ -63,7 +45,7 @@ export default function Checkout() {
                       })}
                     </h2>
                   </div>
-                  <div className="ml-auto self-start">
+                  <div className="ml-auto lg:pl-3 self-start">
                     <span className="text-sm text-gray-400">
                       x{product.quantity}
                     </span>
@@ -98,10 +80,10 @@ export default function Checkout() {
               </li>
             </ul>
 
-            <button className="text-white hover:bg-orange-200 bg-orange-400 min-h-[48px]">
+            <button onClick={() => setOrderModal(true)} className="text-white hover:bg-orange-200 bg-orange-400 min-h-[48px]">
               CONTINUE & PAY
             </button>
-          </div>
+          </div> : null}
         </div>
       </div>
 
