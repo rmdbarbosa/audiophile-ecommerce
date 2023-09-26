@@ -35,7 +35,7 @@ export default function Footer() {
       </p>
       <div className="flex flex-col relative justify-center items-center gap-6 sm:flex-row sm:justify-between w-full">
         <span className="normal-case text-gray-400 text-sm p-3 sm:p-0">
-          Copyright 2021. All Rights Reserved
+          Copyright 2023. All Rights Reserved
         </span>
         <ul className="flex gap-3 lg:absolute lg:top-[-5rem] lg:right-0">
           <li className="cursor-pointer text-orange-400 hover:fill-orange-300 ">
