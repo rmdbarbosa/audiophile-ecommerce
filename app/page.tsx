@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`flex absolute items-center text-center min-h-[600px] justify-center  top-0 left-0 right-0 bg-cover bg-center bg-[url('/assets/home/mobile/image-header.jpg')] sm:bg-[url('/assets/home/tablet/image-header.jpg')] lg:bg-[url('/assets/home/desktop/image-hero.jpg')] lg:justify-start`}
+        className={`flex absolute items-center text-center min-h-screen justify-center  top-0 left-0 right-0 bg-cover bg-center bg-[url('/assets/home/mobile/image-header.jpg')] sm:bg-[url('/assets/home/tablet/image-header.jpg')] lg:bg-[url('/assets/home/desktop/image-hero.jpg')] lg:justify-start`}
       >
         <div className="flex flex-col items-center justify-center gap-6 min-h-[290px] px-6 pt-24 lg:text-left lg:items-start lg:max-w-[500px] lg:pl-28">
           <NewProduct textColor="text-gray-300" />
@@ -31,8 +31,8 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="absolute top-[37rem] -z-50 left-0 right-0 py-6 px-6 uppercase lg:px-28">
-        <div className="flex flex-wrap justify-center gap-3">
+      <div className="absolute top-[49rem] -z-50 left-0 right-0 py-6 px-6 uppercase lg:px-56 2xl:px-80">
+        <div className="flex 2xl:mt-[8rem] flex-wrap justify-center gap-3">
           <ProductCard />
         </div>
         <OrangeSpeakerCard />

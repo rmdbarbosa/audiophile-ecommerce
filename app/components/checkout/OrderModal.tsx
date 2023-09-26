@@ -26,7 +26,7 @@ export default function OrderModal() {
             <circle fill="#D87D4A" cx="32" cy="32" r="32" />
             <path
               stroke="#FFF"
-              stroke-width="4"
+              strokeWidth="4"
               d="m20.754 33.333 6.751 6.751 15.804-15.803"
             />
           </g>

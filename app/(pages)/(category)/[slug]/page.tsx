@@ -32,7 +32,7 @@ export default function categoryPage({ params }: { params: { slug: string } }) {
     ));
 
   return (
-    <div className="px-6 uppercase lg:px-28">
+    <div className="px-6 uppercase lg:px-36 2xl:px-96">
       <div className="absolute top-[5.6rem] left-0 right-0 bg-black min-h-[100px] text-white justify-center items-center flex font-bold text-2xl">
         <h2>{params.slug}</h2>
       </div>

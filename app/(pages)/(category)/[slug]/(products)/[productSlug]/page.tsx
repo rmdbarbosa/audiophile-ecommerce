@@ -51,7 +51,7 @@ export default function productsPage({
   );
 
   return (
-    <div className="text-center p-6 lg:px-36 uppercase">
+    <div className="text-center p-6 lg:px-36 2xl:px-96 uppercase">
       <GoBack />
       <MainProductPage
         description={productFilteredBySlug[0].description}
